@@ -5,8 +5,6 @@
 
 # The World Happiness Report is a landmark survey of the state of global happiness. The first report was published in 2012, the second in 2013, the third in 2015, and the fourth in the 2016 Update. The World Happiness 2017, which ranks 155 countries by their happiness levels, was released at the United Nations at an event celebrating International Day of Happiness on March 20th.
 
-# In[1]:
-
 
 import pandas as pd
 import numpy as np
@@ -26,31 +24,29 @@ from dash.exceptions import PreventUpdate
 get_ipython().run_line_magic('matplotlib', 'inline')
 
 
-# In[2]:
+
 
 
 df_2015 = pd.read_csv("2015.csv")
 
 
-# In[3]:
+
 
 
 df_2016 = pd.read_csv("2016.csv")
 
 
-# In[4]:
 
 
 df_2017 = pd.read_csv("2017.csv")
 
 
-# In[5]:
+
 
 
 df_2018 = pd.read_csv("2018.csv")
 
 
-# In[26]:
 
 
 df_2019 = pd.read_csv("2019.csv")
@@ -62,19 +58,17 @@ df_2019 = pd.read_csv("2019.csv")
 
 # ### Year 2015
 
-# In[6]:
 
 
 df_2015.head()
 
 
-# In[7]:
 
 
 df_2015.columns
 
 
-# In[8]:
+
 
 
 # Use Year 2015 columns in our analysis and insert another column for year. 
@@ -84,27 +78,25 @@ df_2015_temp = df_2015.filter(['Happiness Rank', 'Country', 'Region','Economy (G
                         'Happiness Score' ])
 
 
-# In[53]:
+
 
 
 df_2015_temp.insert(0, "Year", 2015)
 
 
-# ### Year 2016
-
-# In[14]:
+#### Year 2016
 
 
 df_2016.head()
 
 
-# In[11]:
+
 
 
 df_2016.columns
 
 
-# In[12]:
+
 
 
 # Use Year 2016 columns in our analysis and insert another column for year. 
@@ -114,7 +106,7 @@ df_2016_temp = df_2016.filter(['Happiness Rank','Country', 'Region','Economy (GD
                         'Happiness Score'])
 
 
-# In[54]:
+
 
 
 df_2016_temp.insert(0, "Year", 2016)
